@@ -206,6 +206,7 @@ void interactive() {
             mclear(ind);
             es[ind].alive = true;
             last = checked[es[ind].u] ? es[ind].v: es[ind].u;
+            mask ^= (1 << last);
             checked[last] = true;
         }
     }
